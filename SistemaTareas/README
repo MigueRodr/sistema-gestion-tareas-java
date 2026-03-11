@@ -1,0 +1,134 @@
+Proyecto académico – Análisis de Algoritmos y Programación Orientada a Objetos
+
+# Sistema de Gestión de Tareas en Java
+
+## Descripción
+
+Este proyecto es un **sistema sencillo para gestionar tareas**, desarrollado en **Java**.
+La idea del programa es poder guardar tareas, verlas, buscarlas y marcar cuando ya se completaron.
+
+El proyecto se hizo para practicar temas como:
+
+* Programación Orientada a Objetos (POO)
+* Uso de **ArrayList**
+* Análisis básico de **complejidad de algoritmos (Big O)**
+
+El sistema funciona desde consola y permite manejar varias tareas dentro de una lista.
+
+---
+
+## Funciones del programa
+
+El sistema permite hacer lo siguiente:
+
+* Agregar una tarea
+* Ver todas las tareas guardadas
+* Buscar una tarea usando su ID
+* Marcar una tarea como completada
+* Eliminar una tarea
+* Ver las tareas que aún están pendientes
+* Filtrar tareas según su prioridad
+
+---
+
+## Estructura del proyecto
+
+El programa está dividido en **3 clases**.
+
+Tarea.java
+SistemaTareas.java
+Main.java
+
+### Tarea.java
+
+Esta clase representa una tarea dentro del sistema.
+
+Cada tarea tiene:
+
+* id → identificador de la tarea
+* descripcion → explica qué hay que hacer
+* prioridad → número de 1 a 5
+* completada → indica si la tarea ya se terminó
+
+También incluye métodos para obtener la información de la tarea y mostrarla en pantalla.
+
+---
+
+### SistemaTareas.java
+
+Esta clase es la que **maneja la lista de tareas**.
+
+Aquí se usa un **ArrayList** para guardar todas las tareas que se crean.
+
+En esta clase están los métodos que permiten:
+
+* agregar tareas
+* buscarlas
+* eliminarlas
+* filtrarlas
+* marcarlas como completadas
+
+---
+
+### Main.java
+
+Aquí está el método **main**, que es donde se ejecuta el programa.
+
+En esta parte se crean algunas tareas de ejemplo y se prueban todas las funciones del sistema para verificar que funcionen correctamente.
+
+---
+
+## Complejidad de los métodos
+
+Para cada método se analizó cuánto tarda dependiendo del número de tareas.
+
+| Método                    | Complejidad |
+| ------------------------- | ----------- |
+| agregarTarea              | O(1)        |
+| listarTareas              | O(n)        |
+| buscarPorId               | O(n)        |
+| marcarCompletada          | O(n)        |
+| eliminarTarea             | O(n)        |
+| obtenerTareasPendientes   | O(n)        |
+| obtenerTareasPorPrioridad | O(n)        |
+
+En la mayoría de los casos la complejidad es **O(n)** porque se necesita recorrer la lista de tareas.
+
+---
+
+## Cómo ejecutar el programa
+
+1. Compilar los archivos:
+
+```
+javac *.java
+```
+
+2. Ejecutar el programa:
+
+```
+java Main
+```
+
+---
+
+## Ejemplo de uso
+
+Al ejecutar el programa se crean varias tareas de prueba como:
+
+* Hacer tarea de programación
+* Estudiar para parcial
+* Ir al gimnasio
+* Comprar comida
+
+Después el programa permite listar las tareas, buscarlas por ID, marcarlas como completadas y eliminarlas.
+
+---
+
+## Autor
+
+Proyecto realizado como práctica académica para aprender más sobre:
+
+* Programación en Java
+* Estructuras de datos
+* Complejidad de algoritmos
